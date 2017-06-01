@@ -11,7 +11,7 @@ module GcPeak
 
     def call(env)
       if env['PATH_INFO'] == @path
-        [200, { 'Content-Type' => 'application/json' }, JSON.dump(GC.stat)]
+        [200, { 'Content-Type' => 'application/json' }, [JSON.dump(GC.stat)]]
       else
         @app.call(env)
       end
