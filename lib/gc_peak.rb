@@ -18,3 +18,4 @@ module GcPeak
     end
   end
 end
+require 'gc_peak/railtie' if defined? Rails
